@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Simulator</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #1183c0;
+}
+
+.container {
+  text-align: center;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  /* border: 2px solid #000; */
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #970424;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+/* Add your existing CSS styles here */
+
+.dice-icon {
+  font-size: 4em;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Simulator</h1>
+    <!-- Jinja2 syntax used to check if dice_value exists. -->
+    <div class="dice" id="dice">{% if dice_value %}<span class="dice-icon">{{ dice_value | safe }}</span>{% endif %}</div>
+    <!-- The safe filter prevents HTML escaping for the displayed value. -->
+    <br><br>
+    <form action="/" method="post">
+      <button type="submit">Roll Dice</button>
+    </form>
+  </div>
+</body>
+</html>
