@@ -18,6 +18,3 @@ def dice_simulator():
     if request.method == 'POST':
         dice_value = random.randint(1, 6)
     return render_template('index.html',  dice_value=dice_faces.get(dice_value))
-
-if __name__ == '__main__':
-    app.run(debug=True)
