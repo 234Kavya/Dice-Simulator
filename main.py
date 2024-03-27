@@ -4,7 +4,7 @@ import random
 app = Flask(__name__)
 
 dice_faces = {
-    1: '&#9856;',  # ⚀
+  pip 
     2: '&#9857;',  # ⚁
     3: '&#9858;',  # ⚂
     4: '&#9859;',  # ⚃
